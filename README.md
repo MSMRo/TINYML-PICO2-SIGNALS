@@ -1,4 +1,4 @@
-# TINYML-PICO2-SIGNALS
+# TINYML-PICO
 Este repositorio busca presentar plantillas para trabajar con TinyML desde código puro tanto a nivel de generación del modelo con TensorFlow, luego generando el modelo ```.h``` para ser usado por algún arduino con soporte como la Raspberry pi pico. Este proyecto recomienda que tengas instalado ```uv``` para facilitar el instalado de las librerias de python.
 
 ## **Librerias de Arduino:**
@@ -9,7 +9,17 @@ Las librerias usadas para trabajar con TinyML y Arduino son:
 - Chirale_TensorflowLite [Descargar](https://raw.githubusercontent.com/MSMRo/TINYML-PICO2-SIGNALS/main/LIBRERIAS_ARDUINO_TINYML/ArduTFLite-main.zip)
 
 En este Notebook, se trabaja con Arduino-cli para programar el raspberry pi pico desde Google Colab, a modo de facilitar la compilación de los modelos usando los recursos de google.
-[LINK NOTEBOOK](https://colab.research.google.com/drive/18JqPjP2GXr5BaOb8yWzYkTlMPOUE4xZr?usp=sharing)
+Notebooks en colab:
+
+- Creación del modelo [LINK NOTEBOOK TENSORFLOW](https://colab.research.google.com/drive/1v5MyUY8FHqm7rpP6NtgZ-m6fqvky_qV9?usp=sharing)
+- Compilación en arduino [LINK NOTEBOOK ARDUINO](https://colab.research.google.com/drive/18JqPjP2GXr5BaOb8yWzYkTlMPOUE4xZr?usp=sharing)
 
 
+## Testing en WOKWI:
+Estas son las plantillas para trabajar con la prueba de los modelos inferidos en Raspberry pi pico en WOKWI:
+
+- Plantilla solo RPI PICO [LINK](https://wokwi.com/projects/new/pi-pico)
+- Plantilla 2 potenciometros [LINK](https://wokwi.com/projects/467953913992595457)
+
+![Plantilla 2 potenciometros](IMGS\pot_pico.png)
 
