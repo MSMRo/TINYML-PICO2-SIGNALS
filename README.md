@@ -2,7 +2,10 @@
 Autor: Ing. Moises Meza
 ---
 
-Este repositorio busca presentar plantillas para trabajar con TinyML desde código puro tanto a nivel de generación del modelo con TensorFlow, luego generando el modelo ```.h``` para ser usado por algún arduino con soporte como la Raspberry pi pico. Este proyecto recomienda que tengas instalado ```uv``` para facilitar el instalado de las librerias de python.
+Este repositorio busca presentar plantillas para trabajar con TinyML desde código puro tanto a nivel de generación del modelo con TensorFlow, luego generando el modelo ```.h``` para ser usado por algún arduino con soporte como la Raspberry pi pico. Este proyecto recomienda que tengas instalado ```uv``` para facilitar el instalado de las librerias de python (SOLO SI QUIERES CORRER EN LOCAL). Todo el proyecto puede funcionar desde Colab.
+
+Los códigos para trabajar de forma local estan en el folder 
+📂 [CODIGOS_TENSORFLOW](https://github.com/MSMRo/TINYML-PICO2-SIGNALS/tree/main/CODIGOS_TENSORFLOW)
 
 Un poco de teoría: 
 [LINK DE DIAPOSITIVA](https://drive.google.com/file/d/1DI_Uv3K8vGp_aNSIkcu0mj_IJ_fYKn9e/view?usp=sharing)
