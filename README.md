@@ -1,57 +1,15 @@
 # TINYML-PICO2-SIGNALS
-# 🧠 Signal Generation and Analysis
+Este repositorio busca presentar plantillas para trabajar con TinyML desde código puro tanto a nivel de generación del modelo con TensorFlow, luego generando el modelo ```.h``` para ser usado por algún arduino con soporte como la Raspberry pi pico. Este proyecto recomienda que tengas instalado ```uv``` para facilitar el instalado de las librerias de python.
 
-This project demonstrates how to **generate synthetic signals** using Arduino (`code.ino`) and how to **analyze or visualize** them using Python (`test_gen_signals.ipynb`).  
-It provides a foundation for experiments in **biomedical signal processing**, **embedded systems**, and **TinyML**.
+## **Librerias de Arduino:**
 
----
+Las librerias usadas para trabajar con TinyML y Arduino son:
+- Arduino_TensorflowLite [Descargar](https://raw.githubusercontent.com/MSMRo/TINYML-PICO2-SIGNALS/main/LIBRERIAS_ARDUINO_TINYML/ArduTFLite-main.zip)
+- ArduTFLite [Descargar](https://raw.githubusercontent.com/MSMRo/TINYML-PICO2-SIGNALS/main/LIBRERIAS_ARDUINO_TINYML/Chirale_TensorFlowLite-main.zip)
+- Chirale_TensorflowLite [Descargar](https://raw.githubusercontent.com/MSMRo/TINYML-PICO2-SIGNALS/main/LIBRERIAS_ARDUINO_TINYML/ArduTFLite-main.zip)
 
-## ⚙️ Components
+En este Notebook, se trabaja con Arduino-cli para programar el raspberry pi pico desde Google Colab, a modo de facilitar la compilación de los modelos usando los recursos de google.
+[LINK NOTEBOOK](https://colab.research.google.com/drive/18JqPjP2GXr5BaOb8yWzYkTlMPOUE4xZr?usp=sharing)
 
-### 1. `code.ino`
-**Platform:** Arduino / Raspberry Pi Pico / compatible microcontroller  
 
-**Purpose:**  
-Generates and transmits synthetic signals (e.g., sine, square, or ECG-like) through the serial interface for real-time analysis.
-
-**Key Features:**
-- Adjustable sampling rate and amplitude.  
-- Output via `analogWrite()` or DAC pins.  
-- Serial transmission of timestamped samples.  
-- Works seamlessly with `pyserial` in Python.
-
-**Example structure:**
-```cpp
-// Lee "idx,valor\n" y publica "ECG valor" para el Serial Plotter
-const uint32_t BAUD = 115200;
-String line;
-
-void setup() {
-  Serial.begin(BAUD);
-  while (!Serial) { ; }
-  Serial.println(F("READY"));
-}
-
-void loop() {
-  while (Serial.available()) {
-    char c = Serial.read();
-    delay(1);
-    if (c == '\n') {
-      int comma = line.indexOf(',');
-      if (comma > 0) {
-        // idx no es estrictamente necesario si solo ploteas
-        //long /*idx*/ _ = line.substring(0, comma).toInt();
-        long val = line.substring(comma + 1).toInt();
-
-        // Para el Serial Plotter: "ECG <valor>"
-        Serial.print("500,");
-        Serial.print(val);
-        Serial.print(",2500\n");
-      }
-      line = "";
-    } else {
-      if (line.length() < 128) line += c; else line = ""; // control simple de overflow
-    }
-  }
-}
 
