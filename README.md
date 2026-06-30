@@ -1,8 +1,11 @@
 # TINYML-PICO
 Autor: Ing. Moises Meza
 ---
+[VIDEO:](https://www.youtube.com/watch?v=uwegeajfaaM)
+[![Alt text](https://img.youtube.com/vi/uwegeajfaaM/0.jpg)](https://www.youtube.com/watch?v=uwegeajfaaM)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uwegeajfaaM?si=B6acaj_mkR7GDsHR&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 Este repositorio busca presentar plantillas para trabajar con TinyML desde código puro tanto a nivel de generación del modelo con TensorFlow, luego generando el modelo ```.h``` para ser usado por algún arduino con soporte como la Raspberry pi pico. Este proyecto recomienda que tengas instalado ```uv``` para facilitar el instalado de las librerias de python (SOLO SI QUIERES CORRER EN LOCAL). Todo el proyecto puede funcionar desde Colab.
 
